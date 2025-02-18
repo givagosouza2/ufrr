@@ -149,7 +149,7 @@ if c_acc == 1 and c_gyro == 1:
     st.text('Duração total (s) = ' +
             str(round((tempo_acc_proc[offset] - tempo_gyro_proc[onset])/1000,2)))
     st.text('Duração de sentar para levantar (s) = ' +
-            str(round((tempo_gyro_proc[onset]-tempo_acc_proc[A1])/1000,2)))
+            str(round((tempo_acc_proc[A1]-tempo_gyro_proc[onset])/1000,2)))
     st.text('Duração da caminhada de ida (s) = ' +
             str(round((tempo_gyro_proc[G1] - tempo_acc_proc[A1])/1000,2)))
     st.text('Duração da caminhada de retorno (s) = ' +
