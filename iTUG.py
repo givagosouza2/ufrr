@@ -112,9 +112,9 @@ if c_acc == 1 and c_gyro == 1:
         ax.plot([tempo_gyro_proc[onset],
                 tempo_gyro_proc[onset]], [0, 10], '--r')
         ax.plot([tempo_gyro_proc[G1],
-                tempo_gyro_proc[G1]], [0, 10], '--b')
+                tempo_gyro_proc[G1]], [0, 10], '--g')
         ax.plot([tempo_gyro_proc[G2],
-                tempo_gyro_proc[G2]], [0, 10], '--b')
+                tempo_gyro_proc[G2]], [0, 10], '--g')
         ax.plot([tempo_acc_proc[offset],
                 tempo_acc_proc[offset]], [0, 10], '--r')
         ax.plot([tempo_acc_proc[A1],
@@ -133,9 +133,9 @@ if c_acc == 1 and c_gyro == 1:
             ax.plot([tempo_gyro_proc[onset],
                      tempo_gyro_proc[onset]], [0, 5], '--r')
             ax.plot([tempo_gyro_proc[G1],
-                    tempo_gyro_proc[G1]], [0, 5], '--b')
+                    tempo_gyro_proc[G1]], [0, 5], '--g')
             ax.plot([tempo_gyro_proc[G2],
-                    tempo_gyro_proc[G2]], [0, 5], '--b')
+                    tempo_gyro_proc[G2]], [0, 5], '--g')
             ax.plot([tempo_acc_proc[offset],
                     tempo_acc_proc[offset]], [0, 5], '--r')
             ax.plot([tempo_acc_proc[A1],
