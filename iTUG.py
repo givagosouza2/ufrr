@@ -110,17 +110,17 @@ if c_acc == 1 and c_gyro == 1:
         fig, ax = plt.subplots()
         ax.plot(tempo_acc_proc, norma_acc)
         ax.plot([tempo_gyro_proc[onset],
-                tempo_gyro_proc[onset]], [0, 5], '--r')
+                tempo_gyro_proc[onset]], [0, 10], '--r')
         ax.plot([tempo_gyro_proc[G1],
-                tempo_gyro_proc[G1]], [0, 5], '--b')
+                tempo_gyro_proc[G1]], [0, 10], '--b')
         ax.plot([tempo_gyro_proc[G2],
-                tempo_gyro_proc[G2]], [0, 5], '--b')
+                tempo_gyro_proc[G2]], [0, 10], '--b')
         ax.plot([tempo_acc_proc[offset],
-                tempo_acc_proc[offset]], [0, 5], '--r')
+                tempo_acc_proc[offset]], [0, 10], '--r')
         ax.plot([tempo_acc_proc[A1],
-                tempo_acc_proc[A1]], [0, 5], '--b')
+                tempo_acc_proc[A1]], [0, 10], '--b')
         ax.plot([tempo_acc_proc[A2],
-                tempo_acc_proc[A2]], [0, 5], '--b')
+                tempo_acc_proc[A2]], [0, 10], '--b')
         ax.set_xlabel('Tempo (s)')
         ax.set_ylabel('Aceleração (m/s^2)')
         ax.set_title('Norma do Acelerômetro')
@@ -146,3 +146,17 @@ if c_acc == 1 and c_gyro == 1:
             ax.set_ylabel('Velocidade angular (rad/s)')
             ax.set_title('Norma do Giroscópio')
             st.pyplot(fig)
+    st.text('Duração total (s) = ' +
+            str(tempo_acc_proc[offset] - tempo_gyro_proc[onset]))
+    st.text('Duração de sentar para levantar (s) = ' +
+            str(tempo_acc_proc[A1] - tempo_gyro_proc[onset]))
+    st.text('Duração da caminhada de ida (s) = ' +
+            str(tempo_gyro_proc[G1] - tempo_acc_proc[A1]))
+    st.text('Duração da caminhada de retorno (s) = ' +
+            str(tempo_gyro_proc[G2] - tempo_gyro_proc[G1]))
+    st.text('Duração de em pé para sentar (s) = ' +
+            str(tempo_acc_proc[A2] - tempo_acc_proc[offset]))
+    st.text('Pico de A1 (m/s2) = ' + str(norma_acc[A1]))
+    st.text('Pico de A2 (m/s2) = ' + str(norma_acc[A2]))
+    st.text('Pico de G1 (m/s2) = ' + str(norma_gyro[G1]))
+    st.text('Pico de G2 (m/s2) = ' + str(norma_gyro[G2]))
