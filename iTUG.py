@@ -101,7 +101,7 @@ if c_acc == 1 and c_gyro == 1:
     with c2:
         A1 = st.slider("Marque o componente A1 teste no acelerômetro",
                        min_value=0, max_value=len(tempo_acc_proc), value=0)
-        A2 = st.slider("Marque o componente G2 teste no acelerômetro",
+        A2 = st.slider("Marque o componente A2 teste no acelerômetro",
                        min_value=0, max_value=len(tempo_acc_proc), value=0)
         offset = st.slider("Marque o fim do teste no acelerômetro",
                            min_value=0, max_value=len(tempo_acc_proc), value=0)
