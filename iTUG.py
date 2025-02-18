@@ -158,5 +158,5 @@ if c_acc == 1 and c_gyro == 1:
             str(round((tempo_acc_proc[offset] - tempo_acc_proc[A2])/1000,2)))
     st.text('Pico de A1 (m/s2) = ' + str(norma_acc[A1]))
     st.text('Pico de A2 (m/s2) = ' + str(norma_acc[A2]))
-    st.text('Pico de G1 (m/s2) = ' + str(norma_gyro[G1]))
-    st.text('Pico de G2 (m/s2) = ' + str(norma_gyro[G2]))
+    st.text('Pico de G1 (rad/s) = ' + str(norma_gyro[G1]))
+    st.text('Pico de G2 (rad/s) = ' + str(norma_gyro[G2]))
