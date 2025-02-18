@@ -149,13 +149,13 @@ if c_acc == 1 and c_gyro == 1:
     st.text('Duração total (s) = ' +
             str(round((tempo_acc_proc[offset] - tempo_gyro_proc[onset])/1000,2)))
     st.text('Duração de sentar para levantar (s) = ' +
-            str(tempo_acc_proc[A1] - tempo_gyro_proc[onset]))
+            str(round(tempo_gyro_proc[onset]-tempo_acc_proc[A1])/1000,2)))
     st.text('Duração da caminhada de ida (s) = ' +
-            str(tempo_gyro_proc[G1] - tempo_acc_proc[A1]))
+            str(round((tempo_gyro_proc[G1] - tempo_acc_proc[A1])/1000,2)))
     st.text('Duração da caminhada de retorno (s) = ' +
-            str(tempo_gyro_proc[G2] - tempo_gyro_proc[G1]))
+            str(round((tempo_gyro_proc[G2] - tempo_gyro_proc[G1])/1000,2)))
     st.text('Duração de em pé para sentar (s) = ' +
-            str(tempo_acc_proc[A2] - tempo_acc_proc[offset]))
+            str(round(tempo_acc_proc[offset] - tempo_acc_proc[A2])/1000,2)))
     st.text('Pico de A1 (m/s2) = ' + str(norma_acc[A1]))
     st.text('Pico de A2 (m/s2) = ' + str(norma_acc[A2]))
     st.text('Pico de G1 (m/s2) = ' + str(norma_gyro[G1]))
