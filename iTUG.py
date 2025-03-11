@@ -88,7 +88,7 @@ with c2:
 
 if c_acc == 1 and c_gyro == 1:
     tempo_acc_proc, norma_acc = data_processing(
-        tempo_acc, x_acc, y_acc, z_acc, 4)
+        tempo_acc, x_acc, y_acc, z_acc, 0.5)
     tempo_gyro_proc, norma_gyro = data_processing(
         tempo_gyro, x_gyro, y_gyro, z_gyro, 1.5)
     with c1:
