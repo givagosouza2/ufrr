@@ -121,7 +121,7 @@ if c_acc == 1 and c_gyro == 1:
                 tempo_acc_proc[A1]], [0, 10], '--b')
         ax.plot([tempo_acc_proc[A2],
                 tempo_acc_proc[A2]], [0, 10], '--b')
-        ax.set_yaxis(0,1)
+        ax.set_ylim(0,1)
         ax.set_xlabel('Tempo (s)')
         ax.set_ylabel('Aceleração (m/s^2)')
         ax.set_title('Norma do Acelerômetro')
