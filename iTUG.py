@@ -130,7 +130,7 @@ if c_acc == 1 and c_gyro == 1:
     with c2:
         if c_gyro == 1:
             fig, ax = plt.subplots()
-            tempo_gyro_proc = tempo_gyro_proc/1000
+            tempo_gyro_proc = tempo_gyro_proc
             ax.plot(tempo_gyro_proc, norma_gyro,'k')
             ax.plot([tempo_gyro_proc[onset],
                      tempo_gyro_proc[onset]], [0, 5], '--r')
@@ -140,8 +140,8 @@ if c_acc == 1 and c_gyro == 1:
                     tempo_gyro_proc[G2]], [0, 5], '--g')
             ax.plot([tempo_gyro_proc[offset],
                     tempo_gyro_proc[offset]], [0, 5], '--r')
-            #ax.plot([tempo_acc_proc[A1],tempo_acc_proc[A1]], [0, 5], '--b')
-            #ax.plot([tempo_acc_proc[A2],tempo_acc_proc[A2]], [0, 5], '--b')
+            ax.plot([tempo_acc_proc[A1],tempo_acc_proc[A1]], [0, 5], '--b')
+            ax.plot([tempo_acc_proc[A2],tempo_acc_proc[A2]], [0, 5], '--b')
             ax.set_xlabel('Time (s)')
             ax.set_ylabel('Angular velocity (rad/s)')
             ax.set_title('Norma do Giroscópio')
