@@ -130,6 +130,7 @@ if c_acc == 1 and c_gyro == 1:
     with c2:
         if c_gyro == 1:
             fig, ax = plt.subplots()
+            tempo_gyro_proc = tempo_gyro_proc/1000
             ax.plot(tempo_gyro_proc, norma_gyro,'k')
             ax.plot([tempo_gyro_proc[onset],
                      tempo_gyro_proc[onset]], [0, 5], '--r')
