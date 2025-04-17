@@ -138,8 +138,8 @@ if c_acc == 1 and c_gyro == 1:
                     tempo_gyro_proc[G1]], [0, 5], '--g')
             ax.plot([tempo_gyro_proc[G2],
                     tempo_gyro_proc[G2]], [0, 5], '--g')
-            ax.plot([tempo_acc_proc[offset],
-                    tempo_acc_proc[offset]], [0, 5], '--r')
+            ax.plot([tempo_gyro_proc[offset],
+                    tempo_gyro_proc[offset]], [0, 5], '--r')
             #ax.plot([tempo_acc_proc[A1],tempo_acc_proc[A1]], [0, 5], '--b')
             #ax.plot([tempo_acc_proc[A2],tempo_acc_proc[A2]], [0, 5], '--b')
             ax.set_xlabel('Time (s)')
